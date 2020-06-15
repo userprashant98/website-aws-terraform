@@ -118,18 +118,6 @@ provisioner "remote-exec" {
   }
 }
 
-// Creating S3 bucket.
-
-resource "aws_s3_bucket" "my_s3_bucket" {
-  bucket = "mybucket15941594"
-  acl    = "public-read"
-  region = "ap-south-1"
-
-  tags = {
-    Name = "mybucket15941594"
-  }
-}
-
 // Adding object to S3 bucket
 
 resource "aws_s3_bucket_object" "my_image" {
@@ -214,3 +202,17 @@ provisioner "remote-exec" {
     ]
   }
 }
+
+
+// Creating S3 bucket.
+
+resource "aws_s3_bucket" "my_s3_bucket" {
+  bucket = "mybucket15941594"
+  acl    = "public-read"
+  region = "ap-south-1"
+
+  tags = {
+    Name = "mybucket15941594"
+  }
+}
+
